@@ -1,0 +1,22 @@
+{
+  "name": "myApp2",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "app": "turbo run dev --filter=exp2",
+    "web": "turbo run dev --filter=web --ui=stream",
+    "dev": "turbo run dev --ui=stream",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types"
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "turbo": "^2.9.12",
+    "typescript": "5.9.2"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
+  }
+}
