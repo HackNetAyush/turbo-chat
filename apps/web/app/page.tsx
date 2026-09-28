@@ -5,6 +5,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { Button } from "@repo/ui/button";
 import { Card } from "@repo/ui/card";
 import { Code } from "@repo/ui/code";
+import { ChatPanel } from "../components/chat-panel";
 
 export default function Home() {
   return (
@@ -14,12 +15,13 @@ export default function Home() {
           This page is rendered in the web app using components shared with the mobile app.
         </Text>
         <Code code="const shared = true;" />
-        <Button 
-          title="Click Me!" 
-          onPress={() => alert('Hello from Web!')} 
-          style={{ marginTop: 20 }} 
+        <Button
+          title="Click Me!"
+          onPress={() => alert('Hello from Web!')}
+          style={{ marginTop: 20 }}
         />
       </Card>
+      <ChatPanel currentUser="You" />
     </View>
   );
 }
