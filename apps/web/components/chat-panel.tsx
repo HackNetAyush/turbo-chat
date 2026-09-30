@@ -47,8 +47,8 @@ export function ChatPanel({ currentUser }: ChatPanelProps) {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.messageList}>
-        {messages.map((message, index) => (
-          <View key={index} style={styles.messageRow}>
+        {messages.map((message) => (
+          <View key={message.id} style={styles.messageRow}>
             <Text style={styles.author}>{message.author}</Text>
             <Text style={styles.timestamp}>{formatTimestamp(message.createdAt)}</Text>
             <Text style={styles.content}>{message.content}</Text>
